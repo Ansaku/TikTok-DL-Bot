@@ -1,0 +1,41 @@
+{
+  "name": "TikTokDL",
+  "description": "Telegram Bot untuk Mengunduh video/audio Tiktok.",
+  "keywords": [
+    "telegram",
+    "best",
+    "video",
+    "tiktok"
+  ],
+  "success_url": "https://github.com/Ansaku/TikTok-DL-Bot",
+  "website": "https://github.com/Ansaku",
+  "repository": "https://github.com/Ansaku/TikTok-DL-Bot",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Token bot Anda dari @BotFather",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "APP_ID anda dari https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "APP_HASH anda dari https://my.telegram.org",
+      "value": ""
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "stack": "heroku-20",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
