@@ -9,11 +9,11 @@ Telegram Bot untuk Mengunduh video/audio Tiktok.
 
 ## Fitur:
 
-👉 Download Video TikTok tanpa Watermark
+➪ Download Video TikTok tanpa Watermark
 
-👉 Download Video TikTok dengan Watermark
+➪ Download Video TikTok dengan Watermark
 
-👉 Download Audio TikTok
+➪ Download Audio TikTok
 
 ## Deploy
 
