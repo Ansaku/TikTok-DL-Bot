@@ -69,14 +69,14 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-DL_BUTTONS=[
-    [
+DL_BUTTONS = InlineKeyboardMarkup(
+        [[
         InlineKeyboardButton('No Watermark', callback_data='nowm'),
-        InlineKeyboardButton('Watermark', callback_data='wm'),
-    ],
-    [InlineKeyboardButton('Audio', callback_data='audio')],
-]
-
+        InlineKeyboardButton('Watermark', callback_data='wm')
+        ],[
+        InlineKeyboardButton('Audio', callback_data='audio')],
+        [
+    )
 
 # Running bot
 xbot = Client('TikTok-DL-Bot', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
