@@ -49,7 +49,7 @@ async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
 # Start
 @xbot.on_message(filters.command('start') & filters.private)
 async def _start(bot, update):
-  await update.reply_text(f"Hai... 👋\nSaya TikTok-DL-Bot!\nAnda dapat mengunduh video/audio TikTok menggunakan bot ini. Kiriman saya tautan\nDibuat oleh @AnkiSatya", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
+  await update.reply_text(f"Hai... ðŸ‘‹\nSaya TikTok-DL-Bot!\nAnda dapat mengunduh video/audio TikTok menggunakan bot ini. Kiriman saya tautan\nDibuat oleh @AnkiSatya", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
 
 # Downloader for tiktok
 @xbot.on_message(filters.regex(pattern='.*http.*') & filters.private)
@@ -60,7 +60,14 @@ async def _tiktok(bot, update):
   if not 'tiktok.com' in resp.url:
     return
   await update.reply('Pilih opsi di bawah ini', True, reply_markup=InlineKeyboardMarkup(DL_BUTTONS))
-
+        )
+        return
+    await update.reply_chat_action("typing")
+    message = await update.reply_text(
+        text="Menganalisa",
+        quote=True,
+        disable_web_page_preview=True
+    )
 # Callbacks
 @xbot.on_callback_query()
 async def _callbacks(bot, cb: CallbackQuery):
