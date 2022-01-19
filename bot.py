@@ -60,14 +60,7 @@ async def _tiktok(bot, update):
   if not 'tiktok.com' in resp.url:
     return
   await update.reply('Pilih opsi di bawah ini', True, reply_markup=InlineKeyboardMarkup(DL_BUTTONS))
-        )
-        return
-    await update.reply_chat_action("typing")
-    message = await update.reply_text(
-        text="Menganalisa",
-        quote=True,
-        disable_web_page_preview=True
-    )
+
 # Callbacks
 @xbot.on_callback_query()
 async def _callbacks(bot, cb: CallbackQuery):
