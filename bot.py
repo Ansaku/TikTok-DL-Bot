@@ -9,8 +9,6 @@ APP_ID = int(os.environ['APP_ID'])
 BOT_TOKEN = os.environ['BOT_TOKEN']
 downloads = './downloads/{}/'
 
-xbot = Client('TikTok-DL-Bot', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
-
 # Helper
 async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
   args = shlex.split(cmd)
@@ -70,6 +68,7 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
+
 DL_BUTTONS=[
     [
         InlineKeyboardButton('No Watermark', callback_data='nowm'),
@@ -77,6 +76,11 @@ DL_BUTTONS=[
     ],
     [InlineKeyboardButton('Audio', callback_data='audio')],
 ]
+
+
+# Running bot
+xbot = Client('TikTok-DL-Bot', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+
 
 # Start
 @xbot.on_callback_query()
