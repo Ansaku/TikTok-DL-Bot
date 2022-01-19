@@ -75,7 +75,7 @@ DL_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('Watermark', callback_data='wm')
         ],[
         InlineKeyboardButton('Audio', callback_data='audio')],
-        [
+        ]]
     )
 
 # Running bot
